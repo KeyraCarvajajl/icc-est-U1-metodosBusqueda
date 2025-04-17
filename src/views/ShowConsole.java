@@ -1,20 +1,24 @@
 package views;
 
-public class ShowConsole {
-    private Scanner scanner = new Scanner(System.in);
+import java.util.Scanner;
 
-    public void showMenu(){
-        System.err.println("Metodo Busqueda");
-    }
+public class ShowConsole {
+
+    Scanner scanner = new Scanner(System.in);
 
     public int getCode() {
-        System.err.println("Ingrese codigo");
-        int codigo = scanner.nextInt();
-        System.err.println("Codigo ingresado: " + codigo);
-        return codigo;
+        System.out.print("Ingrese el código a buscar: ");
+        return scanner.nextInt();
     }
 
-    public void showMessage(String message){
-        System.err.println(message);
+    public String getName() {
+        System.out.print("Ingrese el nombre: ");
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
     }
+
+    public void showMessage(String message) {
+        System.out.println(message);
+    }
+    
 }
